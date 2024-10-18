@@ -45,7 +45,9 @@ def clear_base_directory() -> bool:
 def get_temp_directory_path(file_path : str) -> str:
 	temp_file_name, _ = os.path.splitext(os.path.basename(file_path))
 	base_directory_path = get_base_directory_path()
-	return os.path.join(base_directory_path, temp_file_name)
+	x = os.path.join(base_directory_path, temp_file_name)
+	print("tmp is", x)
+	return x
 
 
 def create_temp_directory(file_path : str) -> bool:
