@@ -27,8 +27,10 @@ def validate_actions(program : ArgumentParser) -> bool:
 	for action in program._actions:
 		if action.default and action.choices:
 			if isinstance(action.default, list):
-				if any(default not in action.choices for default in action.default):
-					return False
+				for default in action.default:
+					if default not in action.choices:
+						print(default, "not in", action.choices)
+						return False
 			elif action.default not in action.choices:
 				return False
 	return True
