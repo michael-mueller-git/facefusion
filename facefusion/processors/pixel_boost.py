@@ -1,7 +1,7 @@
 from typing import List
 
 import numpy
-from cv2.typing import Size
+from facefusion.cv2_types import Size
 
 from facefusion.typing import VisionFrame
 

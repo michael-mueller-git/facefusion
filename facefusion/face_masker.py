@@ -3,7 +3,8 @@ from typing import Dict, List, Tuple
 
 import cv2
 import numpy
-from cv2.typing import Size
+from facefusion.cv2_types import Size
+
 
 from facefusion import inference_manager
 from facefusion.download import conditional_download_hashes, conditional_download_sources

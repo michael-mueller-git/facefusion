@@ -3,7 +3,7 @@ from typing import Any, List
 
 import cv2
 import numpy
-from cv2.typing import Size
+from facefusion.cv2_types import Size
 from numpy.typing import NDArray
 
 import facefusion.jobs.job_manager
