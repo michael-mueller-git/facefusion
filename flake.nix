@@ -9,6 +9,7 @@
     in {
       devShells.default = pkgs.mkShell {
         packages = [
+			pkgs.ffmpeg_6-full
 			pkgs.python312Packages.filetype
 			pkgs.python312Packages.gradio
 			pkgs.python312Packages.numpy
