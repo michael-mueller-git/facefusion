@@ -144,7 +144,7 @@ def force_download() -> ErrorCode:
 
 				if model_hashes and model_sources:
 					if not conditional_download_hashes(model_hashes) or not conditional_download_sources(model_sources):
-						return 1
+						print("WARNING Corrupt Download", model_sources)
 
 	return 0
 
