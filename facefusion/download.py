@@ -115,6 +115,9 @@ def conditional_download_sources(sources : DownloadSet) -> bool:
 		if remove_file(invalid_source_path):
 			logger.error(wording.get('deleting_corrupt_source').format(source_file_name = invalid_source_file_name), __name__)
 
+	if not invalid_source_paths:
+		process_manager.end()
+
 	return not invalid_source_paths
 
 
